@@ -1,0 +1,33 @@
+{
+  "name": "adr",
+  "owner": {
+    "name": "zircote",
+    "url": "https://github.com/korni22"
+  },
+  "metadata": {
+    "description": "Complete lifecycle management for Architectural Decision Records (ADRs)",
+    "version": "0.3.0"
+  },
+  "plugins": [
+    {
+      "name": "adr",
+      "source": ".",
+      "description": "Complete lifecycle management for Architectural Decision Records: create, update, supersede, search, audit compliance, and export",
+      "author": {
+        "name": "korni22",
+        "url": "https://github.com/korni22"
+      },
+      "version": "0.3.0",
+      "category": "documentation",
+      "tags": [
+        "adr",
+        "architecture",
+        "decisions",
+        "documentation",
+        "madr",
+        "compliance",
+        "governance"
+      ]
+    }
+  ]
+}

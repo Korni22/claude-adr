@@ -1,13 +1,13 @@
 {
   "name": "adr",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Complete lifecycle management for Architectural Decision Records (ADRs): create, update, supersede, search, audit compliance, and export",
   "author": {
-    "name": "zircote",
-    "url": "https://github.com/zircote"
+    "name": "korni22",
+    "url": "https://github.com/korni22"
   },
-  "repository": "https://github.com/zircote/adr",
-  "homepage": "https://github.com/zircote/adr#readme",
+  "repository": "https://github.com/korni22/claude-adr",
+  "homepage": "https://github.com/korni22/claude-adr#readme",
   "license": "MIT",
   "keywords": [
     "adr",
