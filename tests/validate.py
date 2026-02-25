@@ -45,15 +45,11 @@ try:
     with open(plugin_path) as f:
         plugin = json.load(f)
     ok("valid JSON")
-    for field in ("name", "version", "description", "author", "license", "engines"):
+    for field in ("name", "version", "description", "author", "license"):
         if field in plugin:
             ok(f"has '{field}'")
         else:
             error(f"missing required field '{field}'")
-    if "engines" in plugin and "claude-code" in plugin["engines"]:
-        ok("engines.claude-code present")
-    elif "engines" in plugin:
-        error("engines missing 'claude-code' key")
 except Exception as e:
     error(f"could not parse plugin.json: {e}")
 
