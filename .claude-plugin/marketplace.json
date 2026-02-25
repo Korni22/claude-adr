@@ -11,7 +11,10 @@
   "plugins": [
     {
       "name": "adr",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "Korni22/claude-adr"
+      },
       "description": "Complete lifecycle management for Architectural Decision Records: create, update, supersede, search, audit compliance, and export",
       "author": {
         "name": "korni22",
