@@ -9,16 +9,6 @@ argument-hint: '[--format=html|json|pdf] [--output=<path>]'
 description: Export ADRs to HTML, JSON, or PDF format
 name: adr-export
 ---
-<!-- BEGIN MNEMONIC PROTOCOL -->
-
-## Memory
-
-Search first: `/mnemonic:search {relevant_keywords}`
-Capture after: `/mnemonic:capture {namespace} "{title}"`
-
-Run `/mnemonic:list --namespaces` to see available namespaces from loaded ontologies.
-
-<!-- END MNEMONIC PROTOCOL -->
 
 # Export ADRs
 
@@ -97,7 +87,7 @@ Example HTML structure:
 
 Export structured data for tooling integration.
 
-**Schema**: See `${CLAUDE_PLUGIN_ROOT}/schemas/adr-export.schema.json` for the full JSON schema.
+**Schema**: See `schemas/adr-export.schema.json` in the plugin directory for the full JSON schema.
 
 ```json
 {

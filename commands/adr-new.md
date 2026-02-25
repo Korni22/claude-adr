@@ -14,17 +14,6 @@ allowed-tools:
   - Skill
 ---
 
-<!-- BEGIN MNEMONIC PROTOCOL -->
-
-## Memory
-
-Search first: `/mnemonic:search {relevant_keywords}`
-Capture after: `/mnemonic:capture {namespace} "{title}"`
-
-Run `/mnemonic:list --namespaces` to see available namespaces from loaded ontologies.
-
-<!-- END MNEMONIC PROTOCOL -->
-
 # Create New ADR
 
 Create a new Architectural Decision Record with the specified title.
@@ -79,7 +68,7 @@ Use AskUserQuestion for structured input when helpful.
 
 ## Template Selection
 
-Use template from `${CLAUDE_PLUGIN_ROOT}/templates/{format}/`:
+Select the appropriate template based on the configured format. Templates are located in this plugin's `templates/` directory:
 - `madr/adr-template-full.md`
 - `madr/adr-template-minimal.md`
 - `structured-madr/adr-template.md` (comprehensive with frontmatter and audit)
