@@ -18,29 +18,21 @@ jobs:
             echo "ERROR: .claude-plugin/plugin.json not found"
             exit 1
           fi
-          echo "plugin.json found"
-          cat .claude-plugin/plugin.json | python3 -m json.tool > /dev/null
+          python3 -m json.tool .claude-plugin/plugin.json > /dev/null
           echo "plugin.json is valid JSON"
 
-      - name: Validate plugin structure
+      - name: Validate required directories
         run: |
-          echo "Checking required directories..."
+          MISSING=0
           for dir in skills commands agents templates schemas; do
             if [ -d "$dir" ]; then
-              echo "  Found: $dir/"
+              echo "  found: $dir/"
+            else
+              echo "  ERROR: required directory '$dir/' not found"
+              MISSING=1
             fi
           done
+          [ $MISSING -eq 0 ] || exit 1
 
-          echo "Checking skill structure..."
-          for skill in skills/*/SKILL.md; do
-            if [ -f "$skill" ]; then
-              echo "  Found: $skill"
-            fi
-          done
-
-      - name: Validate JSON schemas
-        run: |
-          for schema in schemas/*.json; do
-            echo "Checking: $schema"
-            python3 -m json.tool "$schema" > /dev/null
-          done
+      - name: Validate plugin structure and frontmatter
+        run: python3 tests/validate.py
